@@ -1,0 +1,5 @@
+package com.ust.admin.model;
+
+public class Restaurant {
+
+}

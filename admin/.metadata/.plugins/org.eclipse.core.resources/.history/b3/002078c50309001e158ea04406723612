@@ -1,0 +1,27 @@
+package com.ust.admin.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ust.admin.model.Restaurant;
+import com.ust.admin.repo.RestRepo;
+
+@RestController
+@RequestMapping("/rest")
+public class Rcontroller {
+
+	
+	@Autowired
+	RestRepo repo;
+	
+	@PostMapping("/create")
+	public ResponseEntity<?> create(@RequestBody Restaurant rest){
+		Restaurant rest1=repo.save(rest);
+		
+		return ResponseEntity.ok().body(rest1);
+	}
+}

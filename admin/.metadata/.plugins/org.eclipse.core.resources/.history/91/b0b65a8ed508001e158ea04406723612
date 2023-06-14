@@ -1,0 +1,8 @@
+package com.ust.admin.controllers;
+
+
+@RestController
+@RequestMapping()
+public class RestController {
+
+}

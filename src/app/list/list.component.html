@@ -1,0 +1,33 @@
+<p>list works!</p>
+<div  class="row">
+<div class="col-sm-3" *ngFor="let restuarant of rest" >
+<div class="card">
+    <img src={{restuarant.restPic}} class="card-img-top" alt="imageRest" height="200px"/>
+    <div class="card-body">
+      <h5 class="card-title">{{restuarant.restName}}</h5>
+      <p class="card-text">
+
+       <b>Address:</b> &nbsp;{{restuarant.restAddress}}
+       <br>
+      <b>Contact:</b> &nbsp; {{restuarant.restContact}}
+      </p>
+     
+      <div class="space1">
+    </div>
+    <button (click) = "updateRest(restuarant.id)" class = "btn btn-info"> Update</button> 
+
+      <div class="space">
+    </div>
+    <button  (click) = " deleteRestaurant(restuarant.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>

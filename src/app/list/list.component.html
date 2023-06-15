@@ -1,33 +1,37 @@
-<p>list works!</p>
-<div  class="row">
-<div class="col-sm-3" *ngFor="let restuarant of rest" >
-<div class="card">
-    <img src={{restuarant.restPic}} class="card-img-top" alt="imageRest" height="200px"/>
-    <div class="card-body">
-      <h5 class="card-title">{{restuarant.restName}}</h5>
-      <p class="card-text">
-
-       <b>Address:</b> &nbsp;{{restuarant.restAddress}}
-       <br>
-      <b>Contact:</b> &nbsp; {{restuarant.restContact}}
-      </p>
-     
-      <div class="space1">
-    </div>
-    <button (click) = "updateRest(restuarant.id)" class = "btn btn-info"> Update</button> 
-
-      <div class="space">
-    </div>
-    <button  (click) = " deleteRestaurant(restuarant.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-      
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
+<div *ngIf="rest && rest.length" class="container">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let restaurant of rest">
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <img src="{{restaurant.restPic}}" alt="image" class="rounded-circle" width="80" height="80">
+        </div>
+        <div class="col-md-3">
+          <div class="overflow-hidden">
+           <b>{{restaurant.restName}}</b> 
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="overflow-hidden">
+            {{restaurant.restAddress}}
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="overflow-hidden">
+            {{restaurant.restContact}}
+          </div>
+        </div>
+        <div class="col-md-2 d-flex justify-content-end">
+          <button class="btn btn-primary btn-sm">
+            Menu
+          </button>
+          <button class="btn btn-secondary btn-sm" (click)="updateRest(restaurant.id)">
+            Update
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteRestaurant(restaurant.id)">
+            Remove
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>

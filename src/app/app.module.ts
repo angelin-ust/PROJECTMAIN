@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
 import { RouterModule } from '@angular/router';
 import { UpdateComponent } from './update/update.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -18,6 +19,7 @@ import { UpdateComponent } from './update/update.component';
     ListComponent,
     CreateComponent,
     UpdateComponent,
+    SearchComponent,
    
    
   ],

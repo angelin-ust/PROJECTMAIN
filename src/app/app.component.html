@@ -1,15 +1,225 @@
-<header>
-  <h1>Online food app</h1>
-</header>
+<!DOCTYPE html>
 
-<nav>
+<html>
+
+
+
+
+<head>
+
+  <title>Restaurant Management System</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+
+    body {
+
+      background-color: #f8f9fa;
+
+    }
+
+
+
+
+    .navbar {
+
+      background-color: #000;
+
+      padding: 10px;
+
+    }
+
+
+
+
+    .navbar-brand {
+
+      color: #fff;
+
+      font-weight: bold;
+
+    }
+
+
+
+
+    .button-container {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      margin: 40px auto;
+
+    }
+
+
+
+
+    .button-container .button {
+
+      margin: 10px;
+
+      padding: 15px 30px;
+
+      font-weight: bold;
+
+      font-size: 18px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 10px;
+
+      border: none;
+
+      text-transform: uppercase;
+
+      transition: all 0.3s ease;
+
+      cursor: pointer;
+
+      background-color: #000;
+
+      color: #fff;
+
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+
+
+    .button-container .button i {
+
+      margin-right: 5px;
+
+    }
+
+
+
+
+    .button-container .button:hover {
+
+      background-color: #d71a1a;
+
+    }
+
+
+
+
+    .kitchen-staff-container {
+
+      display: flex;
+
+      justify-content: center;
+
+      margin-bottom: 40px;
+
+    }
+
+
+
+
+    .kitchen-staff-container .button {
+
+      margin-right: 10px;
+
+    }
+
+  </style>
+
+</head>
+
+
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+
+    <a class="navbar-brand" href="#">FoodApp - ADMIN</a>
+
+  </nav>
+
+
+
+
+  <div class="button-container">
+
+    <div class="button" routerLink="/create">
+
+      <i class="fas fa-utensils"></i> Add Restaurant
+
+    </div>
+
+    <div class="button">
+
+      <i class="fas fa-file-alt"></i> Add Menu
+
+    </div>
+
+    <div class="button" routerLink="/product">
+
+      <i class="fas fa-utensils"></i> View Restaurants
+
+    </div>
+
+    <div class="button">
+
+      <i class="fas fa-file-alt"></i> View Menu
+
+    </div>
+
+  </div>
+
+
+
+
  
-  <a routerLink="/product">View</a>
-  <a routerLink="/create">Create</a>
-  <!-- <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
-  <a (click)="logout()" *ngIf="isLoggedIn()">Logout</a> -->
-</nav>
 
-<div class="router-container">
-  <router-outlet></router-outlet>
-</div>
+
+
+
+  <div class="kitchen-staff-container">
+
+    <div class="button">
+
+      <i class="fas fa-list"></i> View Order
+
+    </div>
+
+    <div class="button">
+
+      <i class="fas fa-search"></i> Search for Order
+
+    </div>
+<app-search></app-search>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+
+
+
+</html>
+
+
+
+
+<router-outlet></router-outlet>

@@ -34,4 +34,8 @@ export class ListComponent {
   updateRest(id:number){
     this.router.navigate(['update', id]);
   }
+
+ 
+
+
 }

@@ -1,12 +1,72 @@
-.space {
-    width: 70px;
-    height: auto;
-    display: inline-block;
-  }
- 
+.container {
+  margin: 2.5rem;
+  margin-top: 0.5rem;
+  /* margin-right: 600px; */
+  padding-left: 100px;
+}
 
-  .space1 {
-    width: 10px;
-    height: auto;
-    display: inline-block;
-  }
+ul.list-group {
+  margin: 0.5rem auto; /* Set left and right margin to auto */
+  padding: 0;
+  /* text-align: center;  */
+  /* Center the content horizontally */
+  border: 1px solid #871405; /* Set the desired border color */
+  border-radius: 0.5rem;
+  display: inline-block; /* Add this line */
+}
+
+li.list-group-item {
+  border-bottom: 1px solid #bd1717;
+  transition: border-color 0.3s ease;
+}
+
+li.list-group-item:last-child {
+  border: 1px;
+}
+
+li.list-group-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+li.list-group-item .btn {
+  margin-left: 5px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+li.list-group-item .btn-primary {
+  background-color: #007bff;
+}
+
+li.list-group-item .btn-primary:hover {
+  background-color: #0069d9;
+}
+
+li.list-group-item .btn-secondary {
+  background-color: #6c757d;
+}
+
+li.list-group-item .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+li.list-group-item .btn-danger {
+  background-color: #dc3545;
+}
+
+li.list-group-item .btn-danger:hover {
+  background-color: #c82333;
+}
+
+.overflow-hidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
